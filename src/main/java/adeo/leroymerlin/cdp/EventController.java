@@ -34,4 +34,9 @@ public class EventController {
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     public void updateEvent(@PathVariable Long id, @RequestBody Event event) {
     }
+    
+    @PostMapping (value = "/{new}")
+    public Event createEvent(@RequestBody Event event)  {
+    	return  eventService.save(event);
+    }
 }

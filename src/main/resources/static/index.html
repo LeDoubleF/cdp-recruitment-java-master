@@ -24,7 +24,8 @@
             <div class="page-header">
                 <h1><i class="fa fa-event" aria-hidden="true"></i> My Event</h1>
             </div>
-
+  <button ng-click="events.createEvent(event)" type="button" ><i class="btn btn-outline-primary" aria-hidden="true"  id="form-add"></i>Ajouter</button>
+  
             <div ng-controller="EventsController as events" ng-cloak class="ng-cloak">
                 <div class="" ng-hide="events.events.length">Aucun Event trouvé</div>
 
