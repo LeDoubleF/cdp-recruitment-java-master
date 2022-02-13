@@ -5,7 +5,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Transactional(readOnly = true)
+@Transactional(readOnly = false)
+// readOnly = false to fixing issue 2
 public interface EventRepository extends Repository<Event, Long> {
 
     void deleteById(Long eventId);
