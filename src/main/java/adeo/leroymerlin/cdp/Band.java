@@ -1,6 +1,9 @@
 package adeo.leroymerlin.cdp;
 
 import javax.persistence.*;
+
+import org.hibernate.annotations.Cascade;
+
 import java.util.Set;
 
 @Entity
@@ -12,7 +15,7 @@ public class Band {
 
     private String name;
 
-    @OneToMany(fetch=FetchType.EAGER)
+    @OneToMany(fetch=FetchType.EAGER ,cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Member> members;
 
     public Set<Member> getMembers() {
